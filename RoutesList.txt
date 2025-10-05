@@ -1,0 +1,87 @@
+1) User routes :
+
+    a) route to have the list of ALL users
+    --> http://mehdiwarid.ide.3wa.io:9500/api/users
+    b) route to have one user with his id
+    --> http://mehdiwarid.ide.3wa.io:9500/api/user/:id
+    c) route to save a new user
+    --> http://mehdiwarid.ide.3wa.io:9500/api/user/save
+    d) route to log in
+    --> http://mehdiwarid.ide.3wa.io:9500/api/user/login
+    e) route to edit one user by id
+    --> http://mehdiwarid.ide.3wa.io:9500/api/user/update
+    f) route to delete one user
+    --> http://mehdiwarid.ide.3wa.io:9500/api/user/delete
+  
+    
+2) Authentication route :
+
+    route allowing the management of reconnection by token
+    --> http://mehdiwarid.ide.3wa.io:9500/api/user/verifToken
+    
+    
+3) Contact routes :
+
+    a) route to have the list of ALL contacts
+    --> http://mehdiwarid.ide.3wa.io:9500/api/contact/list
+    b) route to have one contact with his id
+    --> http://mehdiwarid.ide.3wa.io:9500/api/contact/list/:id
+    c) route to save a request
+    --> http://mehdiwarid.ide.3wa.io:9500/api/contact/send
+    d) route to edit one request by id
+    --> http://mehdiwarid.ide.3wa.io:9500/api/contact/update/:id
+    e) route to delete one request
+    --> http://mehdiwarid.ide.3wa.io:9500/api/contact/delete/:id
+    
+
+4) Program routes :
+
+    a) route to have the list of ALL programs
+    --> http://mehdiwarid.ide.3wa.io:9500/api/programs
+    b) route to have one program with his id
+    --> http://mehdiwarid.ide.3wa.io:9500/api/program/:id
+    c) route to save a program
+    --> http://mehdiwarid.ide.3wa.io:9500/api/program/save
+    d) route to add a picture in the API
+    --> http://mehdiwarid.ide.3wa.io:9500/api/program/pict
+    e) route to edit one program by id
+    --> http://mehdiwarid.ide.3wa.io:9500/api/program/update/:id
+    f) route to delete one program
+    --> http://mehdiwarid.ide.3wa.io:9500/api/program/delete/:id
+    g) route to have only programs presentation
+    --> http://mehdiwarid.ide.3wa.io:9500/api/onlyprograms
+
+5) Exercise routes :
+
+    a) route to get all exercises
+    --> http://mehdiwarid.ide.3wa.io:9500/api/exercises
+    b) route to have one exercise with his id
+    --> http://mehdiwarid.ide.3wa.io:9500/api/exercise/:id
+    c) route to save an exercise
+    --> http://mehdiwarid.ide.3wa.io:9500/api/exercise/save
+    d) route to edit one exercise by id
+    --> http://mehdiwarid.ide.3wa.io:9500/api/exercise/update/:id
+    e) route to delete one exercise
+    --> http://mehdiwarid.ide.3wa.io:9500/api/exercise/delete/:id
+    
+
+6) Order routes :
+
+    a) route to get all orders
+    --> http://mehdiwarid.ide.3wa.io:9500/api/orders
+    b) route to get one order by id
+    --> http://mehdiwarid.ide.3wa.io:9500/api/order/:id
+    c) route to save order
+    --> http://mehdiwarid.ide.3wa.io:9500/api/order/save
+    d) route to proceed to the payment
+    --> http://mehdiwarid.ide.3wa.io:9500/api/order/payment
+    e) route to update payment status
+    --> http://mehdiwarid.ide.3wa.io:9500/api/order/status
+    
+    
+7) User Program routes :
+
+    a) route to add one new owner
+    --> http://mehdiwarid.ide.3wa.io:9500/api/userProgram/add
+    b) route to update status owned
+    --> http://mehdiwarid.ide.3wa.io:9500/api/userProgram/status

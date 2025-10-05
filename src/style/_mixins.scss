@@ -1,0 +1,88 @@
+
+/*Form STYLE*/
+@mixin form-style {
+    background-color :  $Dark_blue;
+    color :             $White;
+    padding :           2rem 3rem;
+    margin :            2rem auto;
+    border-radius :     16 px;
+    max-width :         600px;
+    
+    >input:not([type="submit"]),
+    >select,
+    >textarea {
+        width :             100%;
+        padding :           0.7rem;
+        background-color :  $White;
+        color :             $Dark_blue;
+        margin-bottom :     1.2rem;
+        border :            1px solid #ccc;
+        border-radius :     8px;
+        font-size :         1rem;
+    }
+    
+    
+    >button {
+        font-size :         1rem;
+        font-family :       'Winky Sans';
+        font-weight :       600;
+        border :            none;
+        border-radius :     8px;
+        cursor :            pointer;
+        background-color :  $Light_green;
+        transition :        background-color 0.2s ease, transform 0.2s ease;
+    }
+    
+}
+
+/*Button STYLE (without form)*/
+
+@mixin button-style {
+    display :       block;
+    font-size :     1.4rem;
+    margin :        2rem auto;
+    border-radius : 10px;
+    padding :       10px 15px;
+    text-decoration : none;
+    text-align :    center;
+    cursor :        pointer;
+    transition :    background-color 0.3s ease, transform 0.3s ease;
+    
+    @media #{$mobile} {
+        font-size : 1.6rem;
+    }
+    
+    @media #{$tablet} {
+        font-size : 1.8rem;
+    }
+    
+    @media #{$desktop} {
+        font-size : 2rem;
+    }
+    
+}
+
+
+/*Table STYLE*/
+
+@mixin table-style {
+    width: 100%;
+    margin : 0 auto;
+    background-color : $White;
+    color : $Dark_blue;
+    font-family : 'Lato';
+    border-collapse : collapse;
+    border : 1px solid #3c3c3c;
+    
+    th,
+    td {
+        padding : 8px;
+        border : 1px solid #3c3c3c;
+        text-align : center;
+    }
+    
+    th {
+        background-color : #d1d1d1;
+        color : $Dark_blue;
+    }
+}

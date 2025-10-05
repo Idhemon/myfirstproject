@@ -1,0 +1,30 @@
+#cgv {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: left;
+    background-color: $Dark_blue;
+    color: $White;
+    font-family: 'Lato', sans-serif;
+    
+    h2 {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        font-family: "Winky Sans";
+    }
+    
+    h3 {
+        font-size: 2.5rem;
+        margin: 0.5rem 0;
+        color: $Light_green;
+    }
+    
+    article {
+        background-color: rgba(255, 255, 255, 0.1);
+        margin: 0 auto 1rem;
+        padding: 1rem;
+        border-radius: 8px;
+        max-width: 800px;
+    }
+}

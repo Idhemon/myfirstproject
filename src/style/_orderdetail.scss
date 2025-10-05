@@ -1,0 +1,60 @@
+#order-detail {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: center;
+    background-color: $Dark_blue;
+    color: $White;
+    
+    h2 {
+        font-size: 3rem;
+    }
+    
+    h3 {
+        font-size: 2.5rem;
+    }
+    
+    h2,
+    h3 {
+        font-family: "Winky Sans";
+        margin-bottom: 1rem;
+    }
+    
+    article {
+        background-color: rgba(255, 255, 255, 0.1);
+        margin: 1rem auto;
+        padding: 1rem;
+        border-radius: 8px;
+        max-width: 800px;
+        text-align: center;
+        
+        p {
+            margin: 0.5rem 0;
+        }
+    }
+    
+    table {
+        @include table-style;
+        margin: 1rem auto;
+        font-weight: bold;
+    }
+    
+    button {
+        @include button-style;
+        background-color: $Light_green;
+        color: $Dark_blue;
+        display: inline-block;
+        margin-top: 1rem;
+        padding: 1rem;
+        font-size: 1rem;
+    }
+    
+    a {
+        color: $Dark_blue;
+        text-decoration: none;
+    }
+    
+    
+
+    
+}

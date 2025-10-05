@@ -1,0 +1,1842 @@
+/* Download fonts from : https://fonts.google.com/ */
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap");
+/*Mobile first style, by default*/
+/*Tablet style*/
+/*Desktop style*/
+/**********************
+*********RESET*********
+**********************/
+/*Reset basic elements style*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/*Body by default*/
+body {
+  background-color: #142AD2;
+  color: #FFF;
+  line-height: 1.5;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased; /* Font smoothing on Webkit browsers */
+  -moz-osx-font-smoothing: grayscale; /* Font smoothing on macOS */
+}
+
+/*Titles*/
+h1, h2, h3, h4 {
+  font-size: inherit; /*inherit the font-size from the parent or the body */
+  font-weight: inherit; /*inherit the font-weight from the body */
+  margin: 0; /*Default margin removed*/
+}
+
+/*Lists*/
+ol, ul {
+  list-style: none;
+}
+
+/*Links*/
+a {
+  text-decoration: none;
+  color: inherit; /*inherit the text color*/
+}
+
+/*Tables*/
+table {
+  border-collapse: collapse; /*No space between the cells*/
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+/*Forms*/
+input, textarea, select, button {
+  background: transparent;
+  line-height: inherit;
+  border-radius: 4px;
+}
+
+/*Images, Videos*/
+img, video {
+  max-width: 100%; /*Prevent images to overflow their container*/
+  height: auto;
+}
+
+/*Flexbox*/
+html, body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/*Accessibility*/
+[role=presentation], [role=none] {
+  display: none; /*Hide the elements that aren't useful for accessibility*/
+}
+
+/*Form STYLE*/
+/*Button STYLE (without form)*/
+/*Table STYLE*/
+#header {
+  background-color: #142AD2;
+  color: #FFF;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  /*Menu burger style only for mobile*/
+  /*All the links are seen for tablet and desktop*/
+}
+#header .left-part {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 1002;
+}
+#header .left-part img {
+  width: 150px;
+  height: auto;
+}
+#header .left-part h1 {
+  font-size: 1.2rem;
+  margin: 0, 3rem 0;
+}
+#header > nav > ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  margin: 0;
+  gap: 5px;
+}
+#header > nav > ul > li {
+  margin: 0;
+}
+#header > nav > ul > li > a {
+  background-color: #FFF;
+  color: #142AD2;
+  font-size: 0.7rem;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  display: inline-flex;
+  white-space: nowrap;
+  align-items: center;
+  gap: 0.2rem;
+  transition: color 0.3s ease;
+}
+#header > nav > ul > li > a:hover {
+  color: #B5F4A9;
+}
+#header > nav > ul > li > a svg {
+  font-size: 0.8rem;
+}
+#header .menu-burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 1001;
+}
+#header .menu-burger div {
+  width: 100%;
+  height: 3px;
+  background-color: #FFF;
+  margin: 2px 0;
+}
+#header .menu-burger-content {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: #142AD2;
+  padding: 1rem;
+  border-radius: 0 0 4px 4px;
+  z-index: 1000;
+}
+#header .menu-burger-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#header .menu-burger-content ul li {
+  margin: 0.5rem 0;
+  text-align: center;
+}
+#header .menu-burger-content ul li a {
+  color: #FFF;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+#header .menu-burger-content ul li a:hover {
+  color: #B5F4A9;
+}
+@media only screen and (max-width: 759px) {
+  #header {
+    /*Links are hidden in the nav and */
+  }
+  #header .menu-burger {
+    display: flex;
+  }
+  #header .hide {
+    display: none;
+  }
+  #header .menu-burger-content {
+    display: block;
+  }
+}
+@media only screen and (min-width: 760px) {
+  #header .left-part img {
+    width: 300px;
+  }
+  #header .left-part h1 {
+    font-size: 1.8rem;
+  }
+  #header > nav > ul > li > a {
+    font-size: 1rem;
+  }
+  #header > nav > ul > li > a svg {
+    font-size: 1.1rem;
+  }
+  #header .menu-burger {
+    display: none;
+  }
+  #header .hide {
+    display: list-item;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  #header .left-part img {
+    width: 400px;
+  }
+  #header .left-part h1 {
+    font-size: 2.2rem;
+  }
+  #header > nav > ul > li > a {
+    font-size: 1.2rem;
+  }
+  #header > nav > ul > li > a svg {
+    font-size: 1.3rem;
+  }
+}
+
+#home {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+  background-color: #142AD2;
+}
+#home h1 {
+  font-size: 2.5rem;
+  font-family: "Winky Sans";
+  margin-bottom: 1rem;
+}
+#home p {
+  font-size: 1.2rem;
+  font-weight: italic;
+  margin-bottom: 2rem;
+}
+#home ul {
+  padding: 0;
+}
+#home ul li {
+  background-color: #FFF;
+  color: #142AD2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: left;
+}
+#home ul li .content-program {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+#home ul li img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+}
+#home ul li article {
+  margin-bottom: 1rem;
+}
+#home ul li article h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+#home ul li article button {
+  display: block;
+  font-size: 1.4rem;
+  margin: 2rem auto;
+  border-radius: 10px;
+  padding: 10px 15px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  background-color: #B5F4A9;
+  color: #142AD2;
+  margin-top: 1rem;
+}
+@media only screen and (max-width: 759px) {
+  #home ul li article button {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (min-width: 760px) {
+  #home ul li article button {
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  #home ul li article button {
+    font-size: 2rem;
+  }
+}
+#home ul li article button a {
+  color: #142AD2;
+  text-decoration: none;
+}
+@media only screen and (min-width: 760px) {
+  #home h1 {
+    font-size: 3.5rem;
+  }
+  #home p {
+    font-size: 1.4rem;
+  }
+  #home ul li {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+  #home ul li .content-program {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #home ul li article {
+    margin-right: 1rem;
+    text-align: left;
+    width: 60%;
+  }
+  #home ul li img {
+    width: 300px;
+  }
+  #home ul li article h2 {
+    font-size: 2.2rem;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  #home h1 {
+    font-size: 4.5rem;
+  }
+  #home p {
+    font-size: 1.6rem;
+  }
+  #home ul li img {
+    width: 500px;
+  }
+  #home article h2 {
+    font-size: 3rem;
+  }
+}
+
+#register {
+  background-color: #142AD2;
+  color: #FFF;
+  padding: 2rem 3rem;
+  margin: 2rem auto;
+  border-radius: 16 px;
+  max-width: 600px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#register > input:not([type=submit]),
+#register > select,
+#register > textarea {
+  width: 100%;
+  padding: 0.7rem;
+  background-color: #FFF;
+  color: #142AD2;
+  margin-bottom: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+#register > button {
+  font-size: 1rem;
+  font-family: "Winky Sans";
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #B5F4A9;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+#register h2 {
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Winky Sans";
+  margin-bottom: 1rem;
+}
+#register form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#register form input:not([type=submit]) {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.7rem;
+  background-color: #FFF;
+  color: #142AD2;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+#register form .row {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+}
+#register form input[type=submit] {
+  display: block;
+  font-size: 1.4rem;
+  margin: 2rem auto;
+  border-radius: 10px;
+  padding: 10px 15px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  background-color: #B5F4A9;
+  color: #142AD2;
+  margin-top: 1rem;
+}
+@media only screen and (max-width: 759px) {
+  #register form input[type=submit] {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (min-width: 760px) {
+  #register form input[type=submit] {
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  #register form input[type=submit] {
+    font-size: 2rem;
+  }
+}
+#register p {
+  color: red;
+  text-align: center;
+}
+@media only screen and (min-width: 760px) {
+  #register {
+    max-width: 600px;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  #register {
+    max-width: 800px;
+  }
+}
+
+#login {
+  background-color: #142AD2;
+  color: #FFF;
+  padding: 2rem 3rem;
+  margin: 2rem auto;
+  border-radius: 16 px;
+  max-width: 600px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#login > input:not([type=submit]),
+#login > select,
+#login > textarea {
+  width: 100%;
+  padding: 0.7rem;
+  background-color: #FFF;
+  color: #142AD2;
+  margin-bottom: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+#login > button {
+  font-size: 1rem;
+  font-family: "Winky Sans";
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #B5F4A9;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+#login h2 {
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Winky Sans";
+  margin-bottom: 1rem;
+}
+#login form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#login form input:not([type=submit]) {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.7rem;
+  background-color: #FFF;
+  color: #142AD2;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+#login form input[type=submit] {
+  display: block;
+  font-size: 1.4rem;
+  margin: 2rem auto;
+  border-radius: 10px;
+  padding: 10px 15px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  background-color: #B5F4A9;
+  color: #142AD2;
+  margin-top: 1rem;
+}
+@media only screen and (max-width: 759px) {
+  #login form input[type=submit] {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (min-width: 760px) {
+  #login form input[type=submit] {
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  #login form input[type=submit] {
+    font-size: 2rem;
+  }
+}
+#login p {
+  color: red;
+  text-align: center;
+}
+@media only screen and (min-width: 760px) {
+  #login {
+    max-width: 600px;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  #login {
+    max-width: 800px;
+  }
+}
+
+#profile {
+  background-color: #142AD2;
+  color: #FFF;
+  padding: 2rem 3rem;
+  margin: 2rem auto;
+  border-radius: 16 px;
+  max-width: 600px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#profile > input:not([type=submit]),
+#profile > select,
+#profile > textarea {
+  width: 100%;
+  padding: 0.7rem;
+  background-color: #FFF;
+  color: #142AD2;
+  margin-bottom: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+#profile > button {
+  font-size: 1rem;
+  font-family: "Winky Sans";
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #B5F4A9;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+#profile h2 {
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Winky Sans";
+  margin-bottom: 1rem;
+}
+#profile form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#profile form input:not([type=submit]) {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.7rem;
+  background-color: #FFF;
+  color: #142AD2;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+#profile form .row {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+}
+#profile form input[type=submit] {
+  display: block;
+  font-size: 1.4rem;
+  margin: 2rem auto;
+  border-radius: 10px;
+  padding: 10px 15px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  background-color: #B5F4A9;
+  color: #142AD2;
+  margin-top: 1rem;
+}
+@media only screen and (max-width: 759px) {
+  #profile form input[type=submit] {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (min-width: 760px) {
+  #profile form input[type=submit] {
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  #profile form input[type=submit] {
+    font-size: 2rem;
+  }
+}
+#profile p {
+  color: red;
+  text-align: center;
+}
+@media only screen and (min-width: 760px) {
+  #profile {
+    max-width: 600px;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  #profile {
+    max-width: 800px;
+  }
+}
+
+#program {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+  background-color: #142AD2;
+  color: #FFF;
+}
+#program h2 {
+  font-size: 3rem;
+  font-family: "Winky Sans";
+  margin-bottom: 1rem;
+}
+#program ul {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#program ul li {
+  background-color: #FFF;
+  color: #142AD2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+#program ul li img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+#program ul li h3 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+#program ul li button {
+  display: block;
+  font-size: 1.4rem;
+  margin: 2rem auto;
+  border-radius: 10px;
+  padding: 10px 15px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  background-color: #B5F4A9;
+  color: #142AD2;
+  margin-top: 1rem;
+}
+@media only screen and (max-width: 759px) {
+  #program ul li button {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (min-width: 760px) {
+  #program ul li button {
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  #program ul li button {
+    font-size: 2rem;
+  }
+}
+#program #popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FFF;
+  color: #142AD2;
+  padding: 2rem;
+  border-radius: 4px;
+  z-index: 1000;
+  text-align: center;
+  max-width: 90%;
+  width: 400px;
+}
+@media only screen and (min-width: 1100px) {
+  #program ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+  #program li {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+}
+
+#detail {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+  background-color: #142AD2;
+  color: #FFF;
+}
+#detail h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-family: "Winky Sans";
+}
+#detail p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+#detail .chrono {
+  position: fixed;
+  top: 180px;
+  right: 2px;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 8px;
+  z-index: 10;
+  width: 100%;
+}
+#detail .chrono button {
+  padding: 0.5rem 1rem;
+  background-color: #B5F4A9;
+  color: #142AD2;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+#detail .chrono button:hover {
+  background-color: #142AD2;
+  color: #FFF;
+}
+#detail article {
+  background-color: #FFF;
+  color: #142AD2;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 800px;
+  text-align: left;
+}
+#detail article h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+#detail article img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: 1rem auto;
+  display: block;
+}
+#detail a {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.5rem 1rem;
+  background-color: #B5F4A9;
+  color: #142AD2;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+#detail a:hover {
+  background-color: #142AD2;
+  color: #FFF;
+}
+@media only screen and (min-width: 760px) {
+  #detail {
+    width: 85%;
+  }
+  #detail h2 {
+    font-size: 2.2rem;
+  }
+  #detail p {
+    font-size: 1.4rem;
+  }
+  #detail h3 {
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  #detail {
+    width: 80%;
+  }
+  #detail h2 {
+    font-size: 3rem;
+  }
+  #detail p {
+    font-size: 1.6rem;
+  }
+  #detail h3 {
+    font-size: 2.5rem;
+  }
+}
+
+#cart {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+  background-color: #142AD2;
+  color: #FFF;
+}
+#cart h2 {
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Winky Sans";
+  margin-bottom: 1rem;
+}
+#cart table {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #FFF;
+  color: #142AD2;
+  font-family: "Lato";
+  border-collapse: collapse;
+  border: 1px solid #3c3c3c;
+}
+#cart table th,
+#cart table td {
+  padding: 8px;
+  border: 1px solid #3c3c3c;
+  text-align: center;
+}
+#cart table th {
+  background-color: #d1d1d1;
+  color: #142AD2;
+}
+#cart button {
+  display: block;
+  font-size: 1.4rem;
+  margin: 2rem auto;
+  border-radius: 10px;
+  padding: 10px 15px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  background-color: #B5F4A9;
+  color: #142AD2;
+  margin-top: 1rem;
+}
+@media only screen and (max-width: 759px) {
+  #cart button {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (min-width: 760px) {
+  #cart button {
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  #cart button {
+    font-size: 2rem;
+  }
+}
+#cart p {
+  color: red;
+  text-align: center;
+}
+
+#payment {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+  background-color: #142AD2;
+  color: #FFF;
+}
+#payment h2 {
+  font-size: 3rem;
+  font-family: "Winky Sans";
+  margin-bottom: 1rem;
+}
+#payment p {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+#checkout {
+  background-color: #FFF;
+  color: #142AD2;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+#checkout form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#checkout form .stripe-element {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+#checkout form button {
+  display: block;
+  font-size: 1.4rem;
+  margin: 2rem auto;
+  border-radius: 10px;
+  padding: 10px 15px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  background-color: #B5F4A9;
+  color: #142AD2;
+  margin-top: 1rem;
+  width: 100%;
+}
+@media only screen and (max-width: 759px) {
+  #checkout form button {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (min-width: 760px) {
+  #checkout form button {
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  #checkout form button {
+    font-size: 2rem;
+  }
+}
+#checkout form p {
+  color: red;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#success {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+  background-color: #142AD2;
+  color: #FFF;
+}
+#success h2 {
+  font-size: 3rem;
+  font-family: "Winky Sans";
+  margin-bottom: 1rem;
+}
+#success p {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+#success a {
+  color: #142AD2;
+  background-color: #FFF;
+}
+
+#admin {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+  background-color: #142AD2;
+  color: #FFF;
+}
+#admin h2,
+#admin h3 {
+  font-family: "Winky Sans";
+  margin-bottom: 1rem;
+}
+#admin h2 {
+  font-size: 1.8rem;
+}
+#admin h3 {
+  font-size: 1.6rem;
+}
+#admin table {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #FFF;
+  color: #142AD2;
+  font-family: "Lato";
+  border-collapse: collapse;
+  border: 1px solid #3c3c3c;
+  margin-bottom: 2rem;
+  font-size: 0.8rem;
+}
+#admin table th,
+#admin table td {
+  padding: 8px;
+  border: 1px solid #3c3c3c;
+  text-align: center;
+}
+#admin table th {
+  background-color: #d1d1d1;
+  color: #142AD2;
+}
+#admin img {
+  max-width: 60px;
+  height: auto;
+}
+#admin a {
+  color: #142AD2;
+  background-color: #FFF;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+#admin a:hover {
+  background-color: #142AD2;
+  color: #FFF;
+}
+#admin button {
+  display: block;
+  font-size: 1.4rem;
+  margin: 2rem auto;
+  border-radius: 10px;
+  padding: 10px 15px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  background-color: #B5F4A9;
+  color: #142AD2;
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 2rem;
+  font-size: 0.8rem;
+}
+@media only screen and (max-width: 759px) {
+  #admin button {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (min-width: 760px) {
+  #admin button {
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  #admin button {
+    font-size: 2rem;
+  }
+}
+#admin .add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+  font-size: 1rem;
+  color: #142AD2;
+  transition: color 0.3s ease;
+}
+#admin .add:hover {
+  color: #B5F4A9;
+}
+#admin .contact {
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+@media only screen and (min-width: 760px) {
+  #admin h2 {
+    font-size: 2.2rem;
+  }
+  #admin h3 {
+    font-size: 2rem;
+  }
+  #admin table {
+    font-size: 1rem;
+  }
+  #admin img {
+    max-width: 100px;
+  }
+  #admin button {
+    font-size: 1rem;
+  }
+  #admin .add {
+    font-size: 1.2rem;
+  }
+  #admin .contact {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  #admin h2 {
+    font-size: 3rem;
+  }
+  #admin h3 {
+    font-size: 2.5rem;
+  }
+  #admin table {
+    font-size: 1.2rem;
+  }
+  #admin img {
+    max-width: 150px;
+  }
+  #admin button {
+    font-size: 1.2rem;
+  }
+  #admin .add {
+    font-size: 1.4rem;
+  }
+  #admin .contact {
+    font-size: 1.4rem;
+  }
+}
+
+#programadd {
+  background-color: #142AD2;
+  color: #FFF;
+  padding: 2rem 3rem;
+  margin: 2rem auto;
+  border-radius: 16 px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#programadd > input:not([type=submit]),
+#programadd > select,
+#programadd > textarea {
+  width: 100%;
+  padding: 0.7rem;
+  background-color: #FFF;
+  color: #142AD2;
+  margin-bottom: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+#programadd > button {
+  font-size: 1rem;
+  font-family: "Winky Sans";
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #B5F4A9;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+#programadd h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+#programadd form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#programadd form input,
+#programadd form textarea,
+#programadd form select {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.7rem;
+  background-color: #FFF;
+  color: #142AD2;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+#programadd form button {
+  display: block;
+  font-size: 1.4rem;
+  margin: 2rem auto;
+  border-radius: 10px;
+  padding: 10px 15px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  background-color: #B5F4A9;
+  color: #142AD2;
+  margin-top: 1rem;
+}
+@media only screen and (max-width: 759px) {
+  #programadd form button {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (min-width: 760px) {
+  #programadd form button {
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  #programadd form button {
+    font-size: 2rem;
+  }
+}
+#programadd article {
+  width: 100%;
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 8px;
+}
+#programadd article h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+#programadd p {
+  color: red;
+  text-align: center;
+}
+
+#editprogram {
+  background-color: #142AD2;
+  color: #FFF;
+  padding: 2rem 3rem;
+  margin: 2rem auto;
+  border-radius: 16 px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#editprogram > input:not([type=submit]),
+#editprogram > select,
+#editprogram > textarea {
+  width: 100%;
+  padding: 0.7rem;
+  background-color: #FFF;
+  color: #142AD2;
+  margin-bottom: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+#editprogram > button {
+  font-size: 1rem;
+  font-family: "Winky Sans";
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #B5F4A9;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+#editprogram h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+#editprogram h3 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+#editprogram form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#editprogram form input,
+#editprogram form textarea,
+#editprogram form select {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.7rem;
+  background-color: #FFF;
+  color: #142AD2;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+#editprogram form button {
+  display: block;
+  font-size: 1.4rem;
+  margin: 2rem auto;
+  border-radius: 10px;
+  padding: 10px 15px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  background-color: #B5F4A9;
+  color: #142AD2;
+  margin-top: 1rem;
+}
+@media only screen and (max-width: 759px) {
+  #editprogram form button {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (min-width: 760px) {
+  #editprogram form button {
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  #editprogram form button {
+    font-size: 2rem;
+  }
+}
+#editprogram p {
+  color: red;
+  text-align: center;
+}
+
+#order-detail {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+  background-color: #142AD2;
+  color: #FFF;
+}
+#order-detail h2 {
+  font-size: 3rem;
+}
+#order-detail h3 {
+  font-size: 2.5rem;
+}
+#order-detail h2,
+#order-detail h3 {
+  font-family: "Winky Sans";
+  margin-bottom: 1rem;
+}
+#order-detail article {
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 800px;
+  text-align: center;
+}
+#order-detail article p {
+  margin: 0.5rem 0;
+}
+#order-detail table {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #FFF;
+  color: #142AD2;
+  font-family: "Lato";
+  border-collapse: collapse;
+  border: 1px solid #3c3c3c;
+  margin: 1rem auto;
+  font-weight: bold;
+}
+#order-detail table th,
+#order-detail table td {
+  padding: 8px;
+  border: 1px solid #3c3c3c;
+  text-align: center;
+}
+#order-detail table th {
+  background-color: #d1d1d1;
+  color: #142AD2;
+}
+#order-detail button {
+  display: block;
+  font-size: 1.4rem;
+  margin: 2rem auto;
+  border-radius: 10px;
+  padding: 10px 15px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  background-color: #B5F4A9;
+  color: #142AD2;
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1rem;
+  font-size: 1rem;
+}
+@media only screen and (max-width: 759px) {
+  #order-detail button {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (min-width: 760px) {
+  #order-detail button {
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  #order-detail button {
+    font-size: 2rem;
+  }
+}
+#order-detail a {
+  color: #142AD2;
+  text-decoration: none;
+}
+
+#contact-admin {
+  width: 95%;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+  background-color: #142AD2;
+  color: #FFF;
+  overflow-x: auto;
+}
+#contact-admin p {
+  color: red;
+  text-align: center;
+}
+#contact-admin table {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #FFF;
+  color: #142AD2;
+  font-family: "Lato";
+  border-collapse: collapse;
+  border: 1px solid #3c3c3c;
+  margin: 1rem auto;
+  font-size: 0.7rem;
+  width: 100%;
+  overflow-x: auto;
+}
+#contact-admin table th,
+#contact-admin table td {
+  padding: 8px;
+  border: 1px solid #3c3c3c;
+  text-align: center;
+}
+#contact-admin table th {
+  background-color: #d1d1d1;
+  color: #142AD2;
+}
+#contact-admin table th, #contact-admin table td {
+  padding: 0.4rem;
+  white-space: nowrap;
+}
+#contact-admin table button {
+  background-color: #B5F4A9;
+  color: #142AD2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.1rem;
+  padding: 0.3rem;
+  font-size: 0.6rem;
+}
+#contact-admin table button svg {
+  font-size: 0.7rem;
+  margin-left: 0.2rem;
+}
+#contact-admin button {
+  display: block;
+  font-size: 1.4rem;
+  margin: 2rem auto;
+  border-radius: 10px;
+  padding: 10px 15px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  background-color: #B5F4A9;
+  color: #142AD2;
+  display: inline-block;
+  margin: 0.5rem auto;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+@media only screen and (max-width: 759px) {
+  #contact-admin button {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (min-width: 760px) {
+  #contact-admin button {
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  #contact-admin button {
+    font-size: 2rem;
+  }
+}
+
+#contact {
+  background-color: #142AD2;
+  color: #FFF;
+  padding: 2rem 3rem;
+  margin: 2rem auto;
+  border-radius: 16 px;
+  max-width: 600px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#contact > input:not([type=submit]),
+#contact > select,
+#contact > textarea {
+  width: 100%;
+  padding: 0.7rem;
+  background-color: #FFF;
+  color: #142AD2;
+  margin-bottom: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+#contact > button {
+  font-size: 1rem;
+  font-family: "Winky Sans";
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #B5F4A9;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+#contact h2 {
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Winky Sans";
+  margin-bottom: 1rem;
+}
+#contact form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#contact form input:not([type=submit]) {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.7rem;
+  background-color: #FFF;
+  color: #142AD2;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+#contact form .row {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+}
+#contact form input[type=submit] {
+  display: block;
+  font-size: 1.4rem;
+  margin: 2rem auto;
+  border-radius: 10px;
+  padding: 10px 15px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  background-color: #B5F4A9;
+  color: #142AD2;
+  margin-top: 1rem;
+}
+@media only screen and (max-width: 759px) {
+  #contact form input[type=submit] {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (min-width: 760px) {
+  #contact form input[type=submit] {
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  #contact form input[type=submit] {
+    font-size: 2rem;
+  }
+}
+#contact p {
+  color: red;
+  text-align: center;
+}
+@media only screen and (min-width: 760px) {
+  #contact {
+    max-width: 600px;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  #contact {
+    max-width: 800px;
+  }
+}
+
+#cgv {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: left;
+  background-color: #142AD2;
+  color: #FFF;
+  font-family: "Lato", sans-serif;
+}
+#cgv h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-family: "Winky Sans";
+}
+#cgv h3 {
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+  color: #B5F4A9;
+}
+#cgv article {
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 0 auto 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 800px;
+}
+
+#policy {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: left;
+  background-color: #142AD2;
+  color: #FFF;
+  font-family: "Lato", sans-serif;
+}
+#policy h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-family: "Winky Sans";
+}
+#policy h3 {
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+  color: #B5F4A9;
+}
+#policy article {
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 0 auto 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 800px;
+}
+
+#footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+}
+#footer section {
+  margin: 1rem 0;
+  width: 100%;
+  max-width: 300px;
+}
+#footer section h2,
+#footer section h3 {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-family: "Winky Sans";
+}
+#footer section a {
+  color: #FFF;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+#footer section a:hover {
+  color: #B5F4A9;
+}
+#footer section:nth-child(1) .social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+#footer section:nth-child(1) p {
+  margin: 0;
+}
+@media only screen and (min-width: 760px) {
+  #footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  #footer section:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  #footer section:nth-child(2),
+  #footer section:nth-child(3) {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  #footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #footer section {
+    flex: 1;
+    margin: 0 1rem;
+  }
+  #footer section:nth-child(1) {
+    order: 1;
+  }
+  #footer section:nth-child(2) {
+    order: 2;
+    align-items: center;
+  }
+  #footer section:nth-child(3) {
+    order: 3;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: "Lato", "Winky Sans", sans-serif;
+  background-color: #142AD2;
+  color: #FFF;
+}
+
+/*Medium devices (min 760px*/
+@media only screen and (min-width: 760px) {
+  h1 {
+    font-size: 4.6rem;
+  }
+  h2 {
+    font-size: 3.2rem;
+  }
+  h3 {
+    font-size: 2.6rem;
+  }
+}
+/*Large devices (min 1100px*/
+@media only screen and (min-width: 1100px) {
+  h1 {
+    font-size: 4.8rem;
+  }
+  h2 {
+    font-size: 3.4rem;
+  }
+  h3 {
+    font-size: 2.8rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

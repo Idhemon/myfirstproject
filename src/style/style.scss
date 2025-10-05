@@ -1,0 +1,65 @@
+
+@import '_vars';
+@import '_fonts';
+@import '_responsive';
+@import '_reset';
+@import '_mixins';
+@import '_header';
+@import '_home';
+@import '_register';
+@import '_login';
+@import '_profile';
+@import '_program';
+@import '_detail';
+@import '_cart';
+@import '_payment';
+@import '_checkout';
+@import '_success';
+@import '_admin';
+@import '_addprogram';
+@import '_editprogram';
+@import '_orderdetail';
+@import '_contactadmin';
+@import '_contact';
+@import '_cgv';
+@import '_policy';
+@import '_footer';
+
+body {
+    margin:0;
+    font-family: 'Lato', 'Winky Sans', sans-serif;
+    background-color: $Dark_blue;
+    color: $White;
+    
+}
+
+/*Medium devices (min 760px*/
+@media #{$tablet} {
+    h1 {
+        font-size: 4.6rem;
+    }
+
+    h2 {
+        font-size: 3.2rem;
+    }
+    
+    h3 {
+        font-size: 2.6rem;
+    }
+}
+
+
+/*Large devices (min 1100px*/
+@media #{$desktop} {
+    h1 {
+        font-size: 4.8rem;
+    }
+
+    h2 {
+        font-size: 3.4rem;
+    }
+    
+    h3 {
+        font-size: 2.8rem;
+    }
+}

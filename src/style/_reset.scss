@@ -1,0 +1,95 @@
+/**********************
+*********RESET*********
+**********************/
+
+/*Reset basic elements style*/
+
+*,
+*::before,
+*::after {
+    box-sizing:      border-box;
+    margin:          0;
+    padding:         0;
+    border :         0;
+    font-family :    inherit;
+    vertical-align : baseline;
+    
+}
+
+/*Body by default*/
+
+body{
+    background-color:           $Dark_blue;
+    color :                     $White;
+    line-height:                1.5;
+    font-size:                  16px;
+    -webkit-font-smoothing:     antialiased;  /* Font smoothing on Webkit browsers */
+    -moz-osx-font-smoothing:    grayscale;    /* Font smoothing on macOS */
+}
+
+
+/*Titles*/
+
+h1, h2, h3, h4 {
+    font-size:       inherit; /*inherit the font-size from the parent or the body */
+    font-weight:     inherit; /*inherit the font-weight from the body */
+    margin:          0;       /*Default margin removed*/
+}
+
+
+/*Lists*/
+
+ol, ul {
+    list-style :     none;
+}
+
+/*Links*/
+
+a {
+    text-decoration:     none;
+    color:               inherit;    /*inherit the text color*/
+}
+
+/*Tables*/
+
+table {
+    border-collapse :     collapse; /*No space between the cells*/
+    width :               100%;
+}
+
+th, td {
+    text-align :    left;
+    padding :       8px;
+}
+
+/*Forms*/
+
+input, textarea, select, button {
+    background :     transparent;
+    line-height :    inherit;
+    border-radius :  4px;
+}
+
+
+/*Images, Videos*/
+
+img, video {
+    max-width:      100%; /*Prevent images to overflow their container*/
+    height:         auto;
+}
+
+
+/*Flexbox*/
+
+html, body {
+    display :         flex;
+    flex-direction :  column;
+    height :          100%;
+}
+
+
+/*Accessibility*/
+
+[role="presentation"], [role="none"] {
+    display:     none;    /*Hide the elements that aren't useful for accessibility*/
+}
