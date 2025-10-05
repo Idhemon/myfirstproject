@@ -1,11 +1,7 @@
 -- phpMyAdmin SQL Dump
 -- version 5.1.0
 -- https://www.phpmyadmin.net/
---
--- Hôte : db.3wa.io
--- Généré le : mar. 30 sep. 2025 à 16:26
--- Version du serveur :  5.7.33-0ubuntu0.18.04.1-log
--- Version de PHP : 8.0.3
+
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +14,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `mehdiwarid_project`
+
 --
 
 -- --------------------------------------------------------
