@@ -3,7 +3,7 @@
 Une application de gestion de tâches développée en React (front-end) et Node.js (back-end).
 
 ## Technologies
-- Front-end : React, Redux
+- Front-end : React, Redux, Sass
 - Back-end : Node.js, Express
 - Base de données : MySQL
 
